@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: srikanthamudala/sample-django-project
+    command: python djangoProjectV1/manage.py runserver 0.0.0.0:8989
+    volumes: 
+        - .:/code
+    ports:
+      - "8989:8989"
