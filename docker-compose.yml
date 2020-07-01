@@ -3,7 +3,8 @@ services:
   web:
     build: .
     image: srikanthamudala/sample-django-project
-    command: python djangoProjectV1/manage.py runserver 0.0.0.0:8989
+    # command: python djangoProjectV1/manage.py runserver 0.0.0.0:8989
+    command: bash -c “python djangoProjectV1/manage.py makemigrations && python djangoProjectV1/manage.py migrate && python djangoProjectV1/manage.py runserver 0.0.0.0:8989"
     volumes: 
         - .:/code
     ports:

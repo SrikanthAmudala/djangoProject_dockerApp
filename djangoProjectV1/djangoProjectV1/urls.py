@@ -20,5 +20,5 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^library/', include('sampleApp.urls')),
+    url(r'^todo/', include('sampleApp.urls')),
 ]
